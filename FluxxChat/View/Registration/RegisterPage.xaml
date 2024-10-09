@@ -1,0 +1,29 @@
+﻿<Page x:Class="FluxxChat.View.RegisterPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:FluxxChat.View"
+        mc:Ignorable="d"
+        Title="RegisterPage" Height="650" Width="1050" MaxHeight="650" MaxWidth="1050">
+    <Grid Background="#FF27292F">
+        <StackPanel Margin="0,0,0,597" >
+            <ui:TitleBar Title="Страница авторизации"/>
+        </StackPanel>
+
+        <Border Background="#FF202429"  CornerRadius="4" Margin="314,186,314,186">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="5" ShadowDepth="0.5" Direction="1" Color="#FF1A1D21"/>
+            </Border.Effect>
+            <Grid>
+                <ui:TextBlock Text="Регистрация" FontWeight="SemiBold" FontTypography="TitleLarge"  Foreground="White" Margin="89,10,65,203"/>
+                <ui:TextBox PlaceholderText="Логин" Margin="30,97,30,139"/>
+                <ui:TextBox PlaceholderText="Пароль" Margin="30,154,30,82"/>
+                <CheckBox Content="Запомнить меня" Margin="30,220,0,0" VerticalAlignment="Top" Height="27" Width="141"/>
+                <ui:Button Content="Создать" Icon="{ui:SymbolIcon DoorArrowRight16}" Margin="225,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
+                <ui:Button Command="{Binding ReturnAutorizationPageCommand}" Content="" Icon="{ui:SymbolIcon ArrowEnterLeft24}" FontSize="28" Background="Transparent" BorderThickness="0" VerticalAlignment="Top" Height="30" Width="52" Margin="4,5,0,0"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
