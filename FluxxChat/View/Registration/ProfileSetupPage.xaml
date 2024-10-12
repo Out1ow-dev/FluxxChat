@@ -24,8 +24,8 @@
                     <Ellipse Width="100" Height="100" Fill="Transparent" Stroke="Black" StrokeThickness="2" />
                 </Grid>
 
-                <ui:Button Content="Сохранить" Icon="{ui:SymbolIcon Save16}" Margin="271,261,0,0" VerticalAlignment="Top" Height="41" Width="197"/>
-                <ui:Button Content="Пропустить" Icon="{ui:SymbolIcon ArrowStepBack16}" Margin="10,261,0,0" VerticalAlignment="Top" Height="41" Width="197"/>
+                <ui:Button Command="{Binding OpenMainPageCommand}" Content="Сохранить" Icon="{ui:SymbolIcon Save16}" Margin="271,261,0,0" VerticalAlignment="Top" Height="41" Width="197"/>
+                <ui:Button Command="{Binding OpenMainPageCommand}" Content="Пропустить" Icon="{ui:SymbolIcon ArrowStepBack16}" Margin="10,261,0,0" VerticalAlignment="Top" Height="41" Width="197"/>
                 <ui:Button Content="ЗАГРУЗИТЬ" Background="Transparent" FontSize="18" FontWeight="Bold" BorderThickness="0" Icon="{ui:SymbolIcon ArrowUpload16}" Margin="0,198,0,0" VerticalAlignment="Top" Height="42" Width="128" HorizontalAlignment="Center"/>
             </Grid>
         </Border>

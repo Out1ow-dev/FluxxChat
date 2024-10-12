@@ -12,6 +12,7 @@ namespace FluxxChat.Model
     {
         public string Nickname { get; set; }
         public string Status { get; set; }
+        public int Id { get; set; }
 
         private string _avatar;
         public string Avatar
@@ -27,7 +28,7 @@ namespace FluxxChat.Model
                 }
                 else
                 {
-                    AvatarUri = null; 
+                    AvatarUri = null;
                 }
             }
         }
@@ -56,7 +57,8 @@ namespace FluxxChat.Model
             {
                 Messages = new ObservableCollection<ChatMessage>();
             }
-            Messages.Add(new ChatMessage { Message = message, Sender = sender, Timestamp = DateTime.Now.ToString("hh:mm:ss")});
+            Messages.Add(new ChatMessage { Message = message, Sender = sender, Timestamp = DateTime.Now.ToString("hh:mm:ss") });
         }
     }
+
 }

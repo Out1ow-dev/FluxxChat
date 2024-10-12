@@ -6,31 +6,16 @@ using System.Threading.Tasks;
 
 namespace FluxxChat.Model
 {
-    public static class User
+    public class User
     {
-        public static string NickName { get; set; } = string.Empty;
+        public int ID { get; set; }
 
-        public static string Identifier { get; set; } = string.Empty;
+        public string Login { get; set; }
 
-        private static string _avatar = string.Empty;
-        public static string Avatar
-        {
-            get { return _avatar; }
-            set
-            {
-                _avatar = value;
-                Uri avatarUri;
-                if (Uri.TryCreate(value, UriKind.Absolute, out avatarUri))
-                {
-                    AvatarUri = avatarUri;
-                }
-                else
-                {
-                    AvatarUri = null;
-                }
-            }
-        }
+        public string Name { get; set; }
 
-        public static Uri AvatarUri { get; private set; }
+        public string Password { get; set; }
+
+        public Uri Uri { get; set; }
     }
 }

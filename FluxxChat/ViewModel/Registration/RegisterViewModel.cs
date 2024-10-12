@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
+using FluxxChat.View.Registration;
 
 namespace FluxxChat.ViewModel.Registration
 {
@@ -29,12 +30,16 @@ namespace FluxxChat.ViewModel.Registration
 
         AutorizationPage _autorizationPage;
         RegisterPage _registerPage;
+        ProfileSetupPage _profileSetupPage;
+        MainPage _mainPage;
 
         public RegisterViewModel()
         {
             SelectedPageIndex = 0;
             _autorizationPage = new AutorizationPage(this); 
             _registerPage = new RegisterPage(this);
+            _profileSetupPage = new ProfileSetupPage(this);
+            _mainPage = new MainPage();
             Navigate();
         }
 
@@ -47,6 +52,12 @@ namespace FluxxChat.ViewModel.Registration
                     break;
                 case 1:
                     CurrentPage = _registerPage;
+                    break;
+                case 2:
+                    CurrentPage = _profileSetupPage;
+                    break;
+                case 3:
+                    CurrentPage = _mainPage;
                     break;
             }
         }
@@ -63,6 +74,17 @@ namespace FluxxChat.ViewModel.Registration
             Navigate();
         }
 
+        public void OpenSetUpPage()
+        {
+            SelectedPageIndex = 2;
+            Navigate();
+        }
+
+        public void OpenMainPage()
+        {
+            SelectedPageIndex = 3;
+            Navigate();
+        }
     }
 
 }

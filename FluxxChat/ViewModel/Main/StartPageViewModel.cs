@@ -34,7 +34,7 @@ namespace FluxxChat.ViewModel.Main
 
         public StartPageViewModel()
         {
-            if (User.Identifier != string.Empty) 
+            if (Settings.id == null) 
             {
                 SelectedPageIndex = 0;
             }

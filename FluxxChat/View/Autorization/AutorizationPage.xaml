@@ -8,9 +8,6 @@
         mc:Ignorable="d"
         Title="AutorizationPage" Height="650" Width="1050" MaxHeight="650" MaxWidth="1050">
     <Grid Background="#FF27292F">
-        <StackPanel Margin="0,0,0,597" >
-            <ui:TitleBar Title="Страница авторизации"/>
-        </StackPanel>
 
         <Border Background="#FF202429"  CornerRadius="4" Margin="314,186,314,186">
             <Border.Effect>
@@ -18,10 +15,10 @@
             </Border.Effect>
             <Grid>
                 <ui:TextBlock Text="Авторизация" FontWeight="SemiBold" FontTypography="TitleLarge"  Foreground="White" Margin="89,10,65,203"/>
-                <ui:TextBox PlaceholderText="Логин" Margin="30,97,30,139"/>
-                <ui:TextBox PlaceholderText="Пароль" Margin="30,154,30,82"/>
+                <ui:TextBox Text="{Binding Login}" PlaceholderText="Логин" Margin="30,102,30,139"/>
+                <ui:TextBox Text="{Binding Password}" PlaceholderText="Пароль" Margin="30,154,30,82"/>
                 <ui:Button Command="{Binding OpenRegisterPageCommand}" Content="Регистрация" Icon="{ui:SymbolIcon PeopleSync16}" Margin="30,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
-                <ui:Button Content="Авторизация" Icon="{ui:SymbolIcon DoorArrowRight16}" Margin="225,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
+                <ui:Button Command="{Binding AuthorizationCommand}" Content="Авторизация" Icon="{ui:SymbolIcon DoorArrowRight16}" Margin="225,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
             </Grid>
         </Border>
     </Grid>

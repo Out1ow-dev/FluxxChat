@@ -18,10 +18,16 @@ namespace FluxxChat.ViewModel.Registration
         }
 
         public ICommand ReturnAutorizationPageCommand => new RelayCommand(ReturnAutorizationPage);
+        public ICommand OpenSetUpPageCommand => new RelayCommand(OpenSetUpPage);
 
         private void ReturnAutorizationPage()
         {
             RegisterViewModel.OpenAutorizationPage();
+        }
+
+        private void OpenSetUpPage()
+        {
+            RegisterViewModel.OpenSetUpPage();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluxxChat.ViewModel.Registration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace FluxxChat.View.Registration
     /// </summary>
     public partial class ProfileSetupPage : Page
     {
-        public ProfileSetupPage()
+        public ProfileSetUpViewModel ViewModel { get; }
+
+        public ProfileSetupPage(RegisterViewModel registerViewModel)
         {
             InitializeComponent();
+            ViewModel = new ProfileSetUpViewModel(registerViewModel);
+            DataContext = ViewModel;
         }
     }
 }

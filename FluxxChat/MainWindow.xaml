@@ -18,5 +18,10 @@
                 Grid.Row="0"
                 Content="{Binding CurrentPage}"
                 NavigationUIVisibility="Hidden" />
+
+        <StackPanel Margin="0,0,0,614" >
+            <ui:TitleBar Title="Fluxx Chat" Height="36"/>
+        </StackPanel>
     </Grid>
+    
 </Window>

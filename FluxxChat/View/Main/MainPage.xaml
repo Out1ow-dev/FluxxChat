@@ -48,7 +48,7 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <ui:TextBox x:Name="messageTextBox" Text="{Binding TextBoxMessage}" PlaceholderText="Напишите что нибудь..." Margin="0,0,100,0"/>
+                    <ui:TextBox x:Name="messageTextBox" Text="{Binding TextBoxMessage}" PlaceholderText="Напишите что нибудь..." TextWrapping="WrapWithOverflow" Margin="0,0,100,0"/>
                     <ui:Button Command="{Binding SendMessageButton}" Content="Отправить" Margin="649,0,0,0"  Height="36" Width="95"/>
                 </Grid>
                 <Border Background="#FF1A1D21" BorderThickness="1"  Margin="1,-586,-6,552">
@@ -113,15 +113,11 @@
 
             </Grid>
         </Border>
-
-
-        <StackPanel Margin="0,0,0,597" >
-            <ui:TitleBar Title="Chat"/>
-        </StackPanel>
-        <StackPanel Margin="291,0,581,597" Orientation="Horizontal">
+        <StackPanel Margin="291,0,556,597" Orientation="Horizontal">
             <ui:Button Height="41" Icon="{ui:SymbolIcon Call32}" Width="44"/>
             <ui:Button Height="41" Icon="{ui:SymbolIcon Video32}" Width="44" Margin="7,0,0,0"/>
             <ui:Button Height="41" Icon="{ui:SymbolIcon Warning28}" Width="44" Margin="7,0,0,0"/>
+            <ui:Button Height="41" Icon="{ui:SymbolIcon MoreVertical16}" FontSize="20" Width="44" Margin="7,0,0,0"/>
         </StackPanel>
     </Grid>
 </Page>
