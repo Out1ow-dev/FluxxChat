@@ -16,7 +16,7 @@
             <Grid>
                 <ui:TextBlock Text="Выбор фото профиля" FontWeight="SemiBold" FontTypography="TitleLarge"  Foreground="White" Margin="30,10,30,259"/>
                 <Grid Margin="158,60,148,126">
-                    <Image Source="/Resources/Images/StandartAvatar.png" Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="{Binding ImageSource}" Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Image.Clip>
                             <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50" />
                         </Image.Clip>
@@ -26,7 +26,7 @@
 
                 <ui:Button Command="{Binding OpenMainPageCommand}" Content="Сохранить" Icon="{ui:SymbolIcon Save16}" Margin="271,261,0,0" VerticalAlignment="Top" Height="41" Width="197"/>
                 <ui:Button Command="{Binding OpenMainPageCommand}" Content="Пропустить" Icon="{ui:SymbolIcon ArrowStepBack16}" Margin="10,261,0,0" VerticalAlignment="Top" Height="41" Width="197"/>
-                <ui:Button Content="ЗАГРУЗИТЬ" Background="Transparent" FontSize="18" FontWeight="Bold" BorderThickness="0" Icon="{ui:SymbolIcon ArrowUpload16}" Margin="0,198,0,0" VerticalAlignment="Top" Height="42" Width="128" HorizontalAlignment="Center"/>
+                <ui:Button Command="{Binding SetImageCommand}" Content="ЗАГРУЗИТЬ" Background="Transparent" FontSize="18" FontWeight="Bold" BorderThickness="0" Icon="{ui:SymbolIcon ArrowUpload16}" Margin="0,198,0,0" VerticalAlignment="Top" Height="42" Width="128" HorizontalAlignment="Center"/>
             </Grid>
         </Border>
     </Grid>

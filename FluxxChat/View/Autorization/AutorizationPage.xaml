@@ -19,6 +19,7 @@
                 <ui:TextBox Text="{Binding Password}" PlaceholderText="Пароль" Margin="30,154,30,82"/>
                 <ui:Button Command="{Binding OpenRegisterPageCommand}" Content="Регистрация" Icon="{ui:SymbolIcon PeopleSync16}" Margin="30,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
                 <ui:Button Command="{Binding AuthorizationCommand}" Content="Авторизация" Icon="{ui:SymbolIcon DoorArrowRight16}" Margin="225,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
+                <ui:TextBlock Text="" Visibility="Hidden"></ui:TextBlock>
             </Grid>
         </Border>
     </Grid>

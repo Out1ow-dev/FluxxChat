@@ -16,6 +16,7 @@ namespace FluxxChat.ViewModel
         private ObservableCollection<Person> _PersonCollection; 
         private Person _selectedPerson;
         private string _textboxmessage;
+        private string _userImage = Settings.Avatar;
 
         public ObservableCollection<Person> PersonCollection
         {
@@ -47,6 +48,19 @@ namespace FluxxChat.ViewModel
             }
         }
 
+        public string UserImage
+        {
+            get
+            {
+                return _userImage;
+            }
+            set
+            {
+                _userImage = value;
+                OnPropertyChanged(nameof(UserImage));
+            }
+        }
+
         public MainViewModel()
         {
             PersonCollection = new ObservableCollection<Person> 
@@ -57,7 +71,13 @@ namespace FluxxChat.ViewModel
                 new Person { Nickname = "Коля кабан", Status = "Решает вопросы", Avatar = "https://cdn.discordapp.com/attachments/1184109856492355674/1293323676317646960/spT7OlOcYJI.jpg?ex=6706f509&is=6705a389&hm=7e509cb8acc6be4607729ac9ef7a1761d04927db22ae3511026407c85188b769&"}           
             };
 
+            Settings.AvatarChanged += OnAvatarChanged;
             SelectedPerson = PersonCollection.FirstOrDefault();
+        }
+
+        private void OnAvatarChanged()
+        {
+            UserImage = Settings.Avatar;
         }
 
         public ICommand SendMessageButton

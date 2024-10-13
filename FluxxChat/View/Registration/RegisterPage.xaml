@@ -16,10 +16,10 @@
             </Border.Effect>
             <Grid>
                 <ui:TextBlock Text="Регистрация" FontWeight="SemiBold" FontTypography="TitleLarge"  Foreground="White" Margin="89,10,65,203"/>
-                <ui:TextBox PlaceholderText="Логин" Margin="30,103,30,139"/>
-                <ui:PasswordBox  PlaceholderText="Пароль" Margin="30,154,30,82"/>
+                <ui:TextBox Text="{Binding Login}" PlaceholderText="Логин" Margin="30,103,30,139"/>
+                <ui:TextBox Text="{Binding Password}"  PlaceholderText="Пароль" Margin="30,154,30,88"/>
                 <CheckBox Content="Запомнить меня" Margin="30,220,0,0" VerticalAlignment="Top" Height="27" Width="141"/>
-                <ui:Button Command="{Binding OpenSetUpPageCommand}" Content="Создать" Icon="{ui:SymbolIcon DoorArrowRight16}" Margin="225,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
+                <ui:Button Command="{Binding RegistrationCommand}" Content="Создать" Icon="{ui:SymbolIcon DoorArrowRight16}" Margin="225,216,0,0" VerticalAlignment="Top" Height="41" Width="167"/>
                 <ui:Button Command="{Binding ReturnAutorizationPageCommand}" Content="" Icon="{ui:SymbolIcon ArrowEnterLeft24}" FontSize="28" Background="Transparent" BorderThickness="0" VerticalAlignment="Top" Height="30" Width="52" Margin="4,5,0,0"/>
             </Grid>
         </Border>

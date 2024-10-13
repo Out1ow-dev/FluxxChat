@@ -69,7 +69,7 @@ namespace FluxxChat.ViewModel.Autorization
                     Settings.Login = respond.Login;
                     Settings.Name = respond.Name;
                     Settings.Password = respond.Password;
-                    Settings.Avatar = respond.Uri;
+                    Settings.Avatar = respond.Uri.ToString();
                     RegisterViewModel.OpenMainPage();
                 }
                 catch

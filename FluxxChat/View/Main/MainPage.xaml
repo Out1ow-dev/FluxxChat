@@ -99,7 +99,7 @@
                 <DropShadowEffect BlurRadius="8" ShadowDepth="0.5" Direction="5" Color="#FF1A1D21"/>
             </Border.Effect>
             <Grid>
-                <Image RenderOptions.BitmapScalingMode="HighQuality" Source="https://masterpiecer-images.s3.yandex.net/86a3e2cb809e11ee8e947a2f0d1382ba:upscaled" Stretch="Fill"  Margin="8,11,225,11">
+                <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{Binding UserImage}" Stretch="Fill"  Margin="8,11,225,11">
                     <Image.Clip>
                         <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25" />
                     </Image.Clip>
